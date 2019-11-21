@@ -33,7 +33,7 @@ body {
 
 nav.menu {
     text-align:center;
-    filter: drop-shadow(0 0 0.75rem gray);
+    filter: drop-shadow(0 0 0.75rem #212121);
 }
 
 nav.menu li{
@@ -55,7 +55,7 @@ nav.menu i{
 
 a {
     color: #f5f5f5;
-    filter: drop-shadow(0 0 0.75rem gray);
+    filter: drop-shadow(0 0 0.75rem #212121);
     text-decoration: none;
 }
 
@@ -68,7 +68,7 @@ span.name {
     text-transform: none;
     color: #FFFFFF;
     line-height: 4.5vmax;
-    filter: drop-shadow(0 0 0.75rem gray);
+    filter: drop-shadow(0 0 0.75rem #212121);
     animation-duration: 2s;
     animation-name: slidein;
 }
