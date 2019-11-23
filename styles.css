@@ -7,39 +7,118 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow-x: hidden;
     font-size: 100%;
+    /*
+    >the background for the page is a gradient that was provided by uiGradients: https://uigradients.com/
+    >in order to prevent the page from stretching when using the animation for the name, the property overflow-x
+     was set to hidden
+    */
+} 
+.header img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 50%;
+    border-style: none;
+    border-radius: 100%;
+    filter: grayscale(1);
+    /*
+    >the properties set for the profile photo: positioning, size and a grayscale filter.
+    */
 }
 
+.header img:hover {
+    transition: filter 0.5s ease-in-out;
+    filter: grayscale(0);
+    /*
+    >when hovered, the photo has its grayscale filter removed.
+    */
+}
 
 .header p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 3vmin;
+    font-size: 1.55em;
     font-style: normal;
     font-weight: 300;
     letter-spacing: normal;
     text-transform: none;
     color: #FFFFFF;
     text-align: center;
-    line-height: 50%;
+    line-height: 110%;
+    /*
+    >the properties for the text that is in the header class: font style, size and positioning.
+    */
 }
 
-.header img {
-    display: block;
-    margin: 0 auto;
-    max-width: 50%;
-    border-style: none;
-    border-radius: 100%;
-    filter: grayscale(1);
+span.name {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.75em;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+    color: #FFFFFF;
+    line-height: 4.5vmax;
+    animation-duration: 2s;
+    animation-name: slidein;
+    /*
+    >the properties for the name that appears in the description
+    >an animation is added to it using keyframes provided by the MDN: 
+     https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
+    >the name will slide from the right edge of the screen to the center
+    */ 
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        max-width: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+        max-width: 100%;
+    }
+    /*
+    >this is the keyframe that will make the name slide on the screen
+    >we use the margin-left property in order to set the initial and final position of the name
+    >setting margin-left to "100%" will push the the name all the way onto the right edge of the screen,
+     while setting it to "0%" will put the name to its initial position, which is centered.
+    */
+}
+
+
+a {
+    color: #f5f5f5;
+    text-decoration: none;
+    /*
+    >setting text-decoration to "none" removes the underline that is usually attributed to hyperlinks
+    */
+}
+
+a:hover {
+    transition: color .5s;
+    color: #1565C0;
+    text-shadow: 0 0 0.3em blue;
+    /*
+    >when hovered, the hyperlinks (the name and the items in the menu) will turn blue, accompanied by a blue shadow
+    */
 }
 
 nav.menu {
-    text-align:center;
-    filter: drop-shadow(0 0 0.75rem #212121);
+    text-align: center;
 }
 
-nav.menu li{
+nav.menu i {
+    display: block;
+    padding: 0.3em;
+    /*
+    >each item is displayed in a block, in order for the name of the item to fall under its represantative icon.
+    */
+}
+nav.menu li {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
-    font-size: 3vmin;
+    font-size: 1.2em;
     font-style: normal;
     font-weight: 300;
     letter-spacing: normal;
@@ -47,44 +126,9 @@ nav.menu li{
     color: #FFFFFF;
     line-height: 50%;
     padding-right: 1em;
-}
-nav.menu i{
-    display: block;
-    padding: 0.3em;
-}
-
-a {
-    color: #f5f5f5;
-    filter: drop-shadow(0 0 0.75rem #212121);
-    text-decoration: none;
-}
-
-span.name {
-    font-family: 'Raleway', sans-serif;
-    font-size: 4.5vw;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: normal;
-    text-transform: none;
-    color: #FFFFFF;
-    line-height: 4.5vmax;
-    filter: drop-shadow(0 0 0.75rem #212121);
-    animation-duration: 2s;
-    animation-name: slidein;
-}
-
-
+    /*
+    >the menu is displayed inline-block, so the items will be arranged in a single line, from left to right
+    >the padding-right property was used in order to space the items and prevent them from being clumped
     
-
-
-@keyframes slidein {
-    from {
-        margin-left: 100%;
-        max-width: 300%;
-    }
-
-    to {
-        margin-left: 0%;
-        max-width: 100%;
-    }
+    */
 }

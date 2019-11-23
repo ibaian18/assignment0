@@ -2,37 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Assignment 0</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
-        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+        integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet" />
 </head>
-
+<!--
+    >the head tag consists in providing the CSS files that are needed;
+    >the icons who appear in the navigaton menu were taken from FontAwesome: https://fontawesome.com/icons
+    >the fonts used to make the page were taken from Google Fonts: 
+        - Raleway: https://fonts.google.com/specimen/Raleway
+        - Montserrat: https://fonts.google.com/specimen/Montserrat
+-->
 
 <body>
     <div class="header">
         <img src="images/pfp.png">
         <p>My name is</p>
-        <p><span class=name>Iulian</span></p>
-        <p>and I'm a web design student.</p>
+        <p><span class="name"><a href="#">Iulian</a></span></p>
+        <p>and I'm a <span style="color:#1565C0">web design</span> student.</p>
         <p>Here's my work.</p>
     </div>
+<!-- 
+    >the header class is attributed to a div container, which contains the profile photo along with a short description
+-->
     <nav class="menu" style="list-style: none;">
-        <li><a href="portfolio.html"><i class="fas fa-book fa-2x"></i>Portfolio</a></li>
-        <li><a href="https://github.com/ibaian18"><i class="fas fa-comment fa-2x"></i>Social</a></li>
-        <li><a href="mailto:iulian.baian18@gmail.com"><i class="fas fa-envelope fa-2x"></i>Contact</a></li>
-
+        <li>
+            <a href="portfolio.html"><i class="fas fa-book fa-2x"></i>Portfolio</a>
+        </li>
+        <li>
+            <a href="https://github.com/ibaian18"><i class="fab fa-github fa-2x"></i>GitHub</a>
+        </li>
+        <li>
+            <a href="mailto:iulian.baian18@gmail.com"><i class="fas fa-envelope fa-2x"></i>Contact</a>
+        </li>
     </nav>
-
-
-
-
-
-
+<!--
+    >the menu class is attributed to a nav tag;
+    >the bullets of the list are removed using the style element;
+    >each item of the list contains an icon and a name and it is a hyperlink to the following:
+        - Portfolio : internal link, which contains the portfolio page;
+        - GitHub :  external link to the GitHub profile page;
+        - Contact : mailto link to my email address.
+    
+-->
 </body>
 
 </html>
