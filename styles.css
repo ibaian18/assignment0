@@ -12,7 +12,8 @@ body {
     >in order to prevent the page from stretching when using the animation for the name, the property overflow-x
      was set to hidden
     */
-} 
+}
+
 .header img {
     display: block;
     margin: 0 auto;
@@ -65,7 +66,7 @@ span.name {
     >an animation is added to it using keyframes provided by the MDN: 
      https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations
     >the name will slide from the right edge of the screen to the center
-    */ 
+    */
 }
 
 @keyframes slidein {
@@ -78,10 +79,11 @@ span.name {
         margin-left: 0%;
         max-width: 100%;
     }
+
     /*
     >this is the keyframe that will make the name slide on the screen
     >we use the margin-left property in order to set the initial and final position of the name
-    >setting margin-left to "100%" will push the the name all the way onto the right edge of the screen,
+    >setting margin-left to "100%" will push the the name all the way to the right edge of the screen,
      while setting it to "0%" will put the name to its initial position, which is centered.
     */
 }
@@ -115,6 +117,7 @@ nav.menu i {
     >each item is displayed in a block, in order for the name of the item to fall under its represantative icon.
     */
 }
+
 nav.menu li {
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
@@ -129,6 +132,5 @@ nav.menu li {
     /*
     >the menu is displayed inline-block, so the items will be arranged in a single line, from left to right
     >the padding-right property was used in order to space the items and prevent them from being clumped
-    
     */
 }
